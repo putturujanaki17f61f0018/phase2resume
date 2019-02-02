@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+
+      </div>
+      <div class="right">
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
+<script type="text/javascript">
+  var userdata = window.location.search.substring(1).split('&');
+  for (var i = 0; i < userdata.length; i++) {
+        var d = userdata[i].split('=');
+        console.log(d);
+
+
+  }
+  // indexedDB
+  var sietk;
+  var result;
+  var store;
+  var tx;
+
+  // based on the webservers
+  var indexedDB=window.indexedDB || window.mozIndexeDB || window.webkitIndexedDB || window.msIndexedDB ;
+  // db creations
+  sietk=indexedDB.open("mydb",1);
+  // onerror returns the errors
+  sietk.onerror = function(e){
+    console.log("error"+e);
+  }
+  sietk.onupgradeneeded = function(e){
+  result = e.target.result;
+  store = result.createObjectStore("resume",{keyPath:"name"});
+  }
+
+  sietk.onsuccess = function(e){
+    result = e.target.result;
+    tx = result.transaction("resume",'readwrite');
+    store = tx.objectStore("resume");
+    // getting data by using get() method
+    var uinfo = store.get(d[1]);
+    uinfo.onsuccess=function(e){
+      var endresult = e.target.result;
+      console.log(endresult);
+      // function callback
+      personaldata(endresult);
+      education(endresult.education);
+      achive(endresult.achivements);
+
+    }
+    var left = document.querySelector('.left');
+    var right = document.querySelector('.right');
+    function personaldata(MCA){
+      var image=document.createElement("img");
+      image.src="img/profile.jpg";
+      image.alt=MCA.name;
+      left.append(image);
+
+      var name = document.createElement("h1");
+      name.textContent = MCA.name;
+      left.append(name);
+
+      var phone=document.createElement("h4");
+      phone.textContent=MCA.phone;
+      left.append(phone);
+
+      var email=document.createElement("h3");
+      email.textContent=MCA.email;
+      left.append(email);
+
+
+      var heading=document.createElement('h1');
+      heading.textContent="Career Objective";
+      right.appendChild(heading);
+      right.append(document.createElement("hr"));
+      var carr=document.createElement('p');
+      carr.textContent=MCA.career;
+      right.append(carr);
+    }
+    function education(CSE){
+      var heading=document.createElement('h1');
+      heading.textContent="Educational Details";
+      right.appendChild(heading);
+      right.append(document.createElement("hr"));
+
+
+
+    var ul=document.createElement("ul");
+    right.append(ul);
+    for (var i in CSE) {
+      var course=document.createElement("li");
+      course.textContent=CSE[i].course;
+      ul.append(course);
+
+      var institute=document.createElement("p");
+      institute.textContent=CSE[i].institute;
+      ul.append(institute);
+
+
+
+
+      var percentage=document.createElement("p");
+      percentage.textContent=CSE[i].percentage+"%";
+      ul.append(percentage);
+
+      var yearofpassing=document.createElement("p");
+      yearofpassing.textContent="yop:"+CSE[i].yearofpassing;
+      ul.append(yearofpassing);
+
+
+
+
+
+
+    }
+    }
+    // acheivements function
+    function achive(janu){
+      var heading=document.createElement('h2');
+      heading.textContent="Achivements:";
+      right.appendChild(heading);
+      right.append(document.createElement("hr"));
+
+      var ul=document.createElement("ul");
+      right.append(ul);
+      for (var i in janu) {
+        var ach=document.createElement("li");
+        ach.textContent=janu[i].achive;
+        ul.append(ach);
+
+      }
+
+
+    }
+
+
+    }
+
+
+
+
+
+</script>

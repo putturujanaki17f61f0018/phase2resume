@@ -1,0 +1,90 @@
+.maindiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.subdiv{
+  background-color: #ffddaa;
+  width: 85%;
+  padding: 1%;
+  margin:1%;
+  border:3px solid #ddd;
+}
+.subdiv1{
+  background-color: #efddaa;
+  width: 40%;
+  padding: 1%;
+  margin:1%;
+  border: 3px solid #ddd;
+}
+input,select{
+  width:90%;
+  margin: 1%;
+}
+.subdiv h1{
+  color: #794ACF;
+  text-shadow: 2px 2px 2px #ddd;
+}
+
+.subdiv1 h1{
+  color: #2F365F;
+  text-shadow: 2px 2px 2px #ddd;
+}
+
+
+button{
+  margin-left: 45%;
+}
+img{
+
+  height: 30%;
+  width: 30%;
+}
+.parent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.child{
+  color: #ff66cc;
+  width: 30%;
+  border: 1px solid #c45e45;
+  box-shadow: 3px 3px 3px #ddd;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+}
+.main{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.left{
+  background-color: #e6faff;
+  flex: 2;
+  border: 2px solid #000;
+  padding:1%;
+  margin: 5px;
+}
+.right{
+  background-color:  #80ffdf;
+
+  flex: 2;
+  border: 2px solid #000;
+  padding:1%;
+}
+.right h1{
+  color: #00cc66;
+
+}
+.right p{
+  color: #ff33bb;
+}
+
+.right li{
+  color: #0000e6;
+}
+.left h3{
+  color: #8600b3;
+}

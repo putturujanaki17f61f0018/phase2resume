@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>form for resume</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <font color="pink"><center><h1>Form for Resume</h1></center></font>
+    <div class="maindiv">
+      <!--Career objectives   -->
+      <div class="subdiv">
+        <h1>Career Objective</h1>
+        <select id="career" name="career">
+          <option>Select your career objective</option>
+          <option>To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.</option>
+          <option>Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution to the success of the company.</option>
+        </select>
+        </div>
+        <div class="subdiv1">
+          <h1>Personal Information</h1>
+          <h3><input type="text" name="name" id="name" placeholder="Enter Your name"></h3>
+          <h4><input type="number" name="phone" id="phone" placeholder="Enter Your Number"></h4>
+          <input type="text" name="email" id="email" placeholder="Enter Your Email">
+        <!-- Educational details -->
+      </div>
+        <div class="subdiv1">
+          <h1>PG Graduation details</h1>
+          <label for="pgbranch">
+            <select id="pgbranch"name="pgbranch" placeholder="select ur pg degree">
+              <option>Select Your PG Degree Course</option>
+              <option>MCA</option>
+              <option>MBA</option>
+              <option>MTECH</option>
+              <option>MSC</option>
+              <option>MCOM</option>
+              <option>MCA[LE]</option>
+            </select>
+          </label>
+          <label for="pginst">
+            <input type="text" name="pginst"id="pginst" placeholder="Choose u r PG inst" >
+          </label>
+          <label for="pgper">
+            <input type="number" name="Pgper"id="pgper" placeholder="Enter u r Pgpercentage" >
+          </label>
+          <label for="pgyop">
+            <input type="number" name="Pgyop" id="pgyop" placeholder="enter u r Pgyop" >
+          </label>
+        </div>
+        <div class="subdiv1">
+          <h1>Graduation details</h1>
+          <label for="gdbranch">
+            <select id="gdbranch"name="gdbranch">
+              <option>Select Your course</option>
+              <option>Bsc</option>
+              <option>Bcom</option>
+              <option>Bsc mscs</option>
+              <option>Bsc mpcs</option>
+              <option>BZC</option>
+            </select>
+          </label>
+          <label for="ginst">
+            <input type="text" name="ginst"id="ginst" placeholder="Choose u r ginst" >
+          </label>
+          <label for="gper">
+            <input type="number" name="gper"id="gper" placeholder="Enter u r gpercentage" >
+          </label>
+          <label for="gyop">
+            <input type="number" name="gyop" id="gyop" placeholder="enter u r gyop" >
+          </label>
+        </div>
+        <div class="subdiv1">
+          <h1>Intermediate details</h1>
+          <label for="idbranch">
+            <select id="idbranch"name="idbranch">
+              <option>Select Your course</option>
+              <option>Intermediate(M.P.C)</option>
+              <option>Intermediate(BI.P.C)</option>
+              <option>Intermediate(M.E.C)</option>
+              <option>Intermediate(C.S.C)/option>
+            </select>
+          </label>
+          <label for="iinst">
+            <input type="text" name="iinst" id="iinst" placeholder="Choose u r iinst" >
+          </label>
+          <label for="iper">
+            <input type="number" name="iper"id="iper" placeholder="Enter u r interpercentage" >
+          </label>
+          <label for="iyop">
+            <input type="number" name="iyop" id="iyop" placeholder="enter u r iyop" >
+          </label>
+        </div>
+        <div class="subdiv1">
+          <h1>SSC details</h1>
+          <label for="sbranch">
+            <select id="sbranch"name="sbranch">
+              <option>Select Your course</option>
+              <option>SSC</option>
+              <option>CBSE</option>
+            ]</select>
+          </label>
+          <label for="sscinst">
+            <input type="text" name="sscinst"id="sscperinst" placeholder="enter u r sscinst" >
+          </label>
+          <label for="sscper">
+            <input type="number" name="sscper"id="sscper" placeholder="Enter u r sscpercentage" >
+          </label>
+          <label for="sscyop">
+            <input type="number" name="gyop" id="sscyop" placeholder="enter u r sscyop" >
+          </label>
+        </div>
+        <div class="subdiv1">
+          <h1>Achivements</h1>
+          <label for="achive1">
+            <input type="text" name="achive1" id="achive1" placeholder="enter u r achivement 1" >
+          </label>
+          <label for="achive2">
+            <input type="text" name="achive2" id="achive2" placeholder="enter u r achivement 2" >
+          </label>
+          <label for="achive3">
+            <input type="text" name="achive3" id="achive3" placeholder="enter u r achivement 3" >
+          </label>
+        </div>
+
+
+      </div>
+
+  </div>
+
+    <button type="button" name="button" onclick="SubmitData()">Submit</button>
+
+  </body>
+</html>
+<!-- java script -->
+<script type="text/javascript">
+function SubmitData(){
+  var career=document.getElementById('career').value;
+
+  var name=document.getElementById("name").value;
+  var phone=document.getElementById('phone').value;
+  var email=document.getElementById('email').value;
+
+  var pgbranch=document.getElementById('pgbranch').value;
+  var pginst=document.getElementById('pginst').value;
+  var pgper=document.getElementById('pgper').value;
+  var pgyop=document.getElementById('pgyop').value;
+
+
+  var gdbranch=document.getElementById('gdbranch').value;
+  var ginst=document.getElementById('ginst').value;
+  var gper=document.getElementById('gper').value;
+  var gyop=document.getElementById('gyop').value;
+
+  var idbranch=document.getElementById('idbranch').value;
+  var iinst=document.getElementById('iinst').value;
+  var iper=document.getElementById('iper').value;
+  var iyop=document.getElementById('iyop').value;
+
+  var sbranch=document.getElementById('sbranch').value;
+  var sscperinst=document.getElementById('sscperinst').value;
+  var sscper=document.getElementById('sscper').value;
+  var sscyop=document.getElementById('sscyop').value;
+
+  var achive1=document.getElementById('achive1').value;
+  var achive2=document.getElementById('achive2').value;
+  var achive3=document.getElementById('achive3').value;
+
+  var sietk;
+  var result;
+  var store;
+  var tx;
+
+// based on the webservers
+  var indexedDB=window.indexedDB || window.mozIndexeDB || window.webkitIndexedDB || window.msIndexedDB ;
+  // db creations
+  sietk=indexedDB.open("mydb",1);
+  // onerror returns the errors
+  sietk.onerror = function(e){
+    console.log("error"+e);
+  }
+  sietk.onupgradeneeded = function(e){
+  result = e.target.result;
+  store = result.createObjectStore("resume",{keyPath:"name"});
+  }
+  sietk.onsuccess = function(e){
+  result = e.target.result;
+  tx = result.transaction("resume",'readwrite');
+  store=tx.objectStore("resume");
+  store.put({
+    career:career,
+    name:name,
+    phone:phone,
+    email:email,
+    education:[
+      {
+        course : pgbranch,
+        institute : pginst,
+        percentage:pgper,
+        yearofpassing :pgyop
+      },
+      {
+        course : gdbranch,
+        institute : ginst,
+        percentage:gper,
+        yearofpassing :gyop
+
+      },
+      {
+        course : idbranch,
+        institute : iinst,
+        percentage:iper,
+        yearofpassing :iyop
+
+      },
+      {
+        course : sbranch,
+        institute : sscperinst,
+        percentage:sscper,
+        yearofpassing :sscyop
+      }
+    ],
+    achivements:[
+      {
+        achive :achive1
+      },
+      {
+        achive :achive2
+      },
+      {
+        achive :achive3
+      }
+    ]
+  });
+  window.alert("data submitted");
+  window.open("index.html");
+  }
+
+
+}
+
+</script>
